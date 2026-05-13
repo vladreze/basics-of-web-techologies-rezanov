@@ -1,0 +1,118 @@
+<!--
+
+Що дано
+broken.html — готова сторінка-портфоліо з ~10 проблемами доступності і семантики.
+
+Серед потенційних проблем:
+
+<img> без alt +
+<a> без href, з onclick +
+<div onclick> як «кнопка»
+Заголовки в неправильному порядку (h1 → h3 → h2) +
+<input> без <label> (placeholder замість) + 
+Список через <br> замість <ul> + 
+Відсутній lang на <html> + 
+target="_blank" без rel="noopener" +
+Контраст інформації передається тільки кольором (наприклад, червоний текст без іконки)
+<button> без type атрибута +
+    
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Олена Петренко — портфоліо</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 760px;
+      margin: 2rem auto;
+      padding: 1rem;
+      line-height: 1.5;
+    }
+    .btn {
+      background: #2050a0;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      display: inline-block;
+      cursor: pointer;
+      margin: 4px 0;
+    }
+    .status-error { color: #d22; }
+    .status-ok { color: #2a8; }
+    .avatar { width: 160px; height: 160px; border-radius: 50%; }
+    a { color: #2050a0; }
+    h2 { border-bottom: 1px solid #ddd; padding-bottom: 6px; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+  <h1>Привіт, мене звати Олена</h1>
+
+  <p>Я студентка 1-го курсу ІПЗ у НаУКМА. Тут — мої проєкти і контакти.</p>
+
+  <img class="avatar" src="me.jpg" alt="Фото Олени Петренко">
+
+  <h2>Освіта</h2>
+
+  НаУКМА, бакалавр ІПЗ<br>
+  Спеціалізація: веб-розробка<br>
+  Рік випуску: 2027<br>
+  Середній бал: 4.7
+
+  <h2>Проєкти</h2>
+
+  <h3>Інтернет-магазин випічки</h3>
+
+  <p>Платформа для замовлення домашньої випічки з доставкою.</p>
+
+  <p>Статус: <span class="status-error">проблеми з оплатою</span>, <span class="status-ok">доставка працює</span></p>
+
+  <p>Технології:</p>
+  <ul>
+    <li>React</li>
+    <li>Node.js</li>
+    <li>TypeScript</li>
+    <li>PostgreSQL</li>
+  </ul>
+
+  <h3>Календар університетських подій</h3>
+
+  <p>Веб-застосунок для слідкування за подіями факультету. Інтегрований з Google Calendar.</p>
+
+  <img src="calendar-screenshot.png" alt="Скріншот календаря">
+
+  <h2>Контакти</h2>
+
+  <p>Зв'яжіться зі мною:</p>
+
+  <a href="mailto:olenapetrenko@example.com" onclick="alert('email')">Написати email</a>
+
+  <div class="btn" onclick="alert('Дзвінок')">Зателефонувати</div>
+
+  <h2>Підписка на новини</h2>
+
+  <p>Залиште email і отримуйте щотижневі оновлення про мої проєкти:</p>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" placeholder="Ваш email">
+  <button type="submit">Підписатися</button>
+
+  <h2>Соцмережі</h2>
+
+  <p>
+    <a href="https://github.com/olenapetrenko" target="_blank" rel="noopener">GitHub</a>
+    &middot;
+    <a href="https://linkedin.com/in/olenapetrenko" target="_blank" rel="noopener">LinkedIn</a>
+    &middot;
+    <a href="https://twitter.com/olenap" target="_blank" rel="noopener">Twitter</a>
+  </p>
+
+  <hr>
+  <p style="text-align: center; color: #888;">&copy; 2026 Олена Петренко</p>
+
+</body>
+</html>

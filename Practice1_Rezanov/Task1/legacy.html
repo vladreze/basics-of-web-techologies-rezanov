@@ -1,0 +1,37 @@
+<!-- 
+Перепишіть HTML, замінивши <div>-обгортки на семантичні теги HTML5: <header>, <nav>, <main>, <article>, <aside>, <footer> (де доречно).
+Замініть <div class="link"><a></a></div> на <li><a></a></li> всередині <ul> для навігації.
+Замініть <div class="title"> на правильний рівень заголовка (<h1>, <h2> тощо).
+Додайте до <html> атрибут lang="uk".
+Додайте правильний <title> у <head>.
+Збережіть весь текстовий контент незмінним.
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <div class="page">
+    <header class="top">
+    <div class="logo">МійБлог</div>
+    <nav class="menu">
+        <ul>
+            <li class="link"><a href="/">Головна</a></li>
+            <li class="link"><a href="/about">Про мене</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <article class="post">
+      <h1 class="title">Заголовок поста</h1>
+      <p class="text">Текст поста...</p>
+    </article>
+  </main>
+  <footer class="bottom">© 2026</footer>
+</div>
+</body>
+</html>
