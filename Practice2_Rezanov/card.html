@@ -1,0 +1,43 @@
+x<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Картка — практична CSS</title>
+  <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+  <!--
+    Варіант контенту визначається викладачем.
+    Структура (теги, класи) однакова для всіх варіантів —
+    змінюється тільки контент усередині.
+
+    Варіант D — Картка КУРСУ
+  -->
+
+  <article class="card">
+    <img class="card-image"
+         src="img/how-to-front-end-840.jpg"
+         alt="Зображення для картки">
+
+    <h3 class="card-title">КУРС "FRONT-END DEVELOPMENT"</h3>
+
+    <p class="card-meta">
+      Автор: Vladyslav Rezanov<br>
+      Дата початку: 2026-05-13
+    </p>
+
+    <p class="card-description">
+      Даний курс допоможе вам освоїти основи фронтенд-розробки, включаючи HTML, CSS та JS. Ви навчитеся створювати сучасні веб-сайти та інтерфейси користувача, а також отримаєте практичні навички для роботи з популярними фреймворками та бібліотеками.
+    </p>
+
+    <p class="card-price">1999грн</p>
+
+    <button class="card-action" type="button">
+      Дізнатися більше
+    </button>
+  </article>
+
+</body>
+</html>
