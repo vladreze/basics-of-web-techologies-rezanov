@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items list</title>
+    <link rel="stylesheet" href="RezanovHw1_styles.css">
+</head>
+<body>
+    <main class="container">
+        
+        <section class="buy-list">
+            <div class="add-panel">
+                <input type="text" class="add-input" placeholder="Назва товару" aria-label="Назва товару">
+                <button class="btn btn-add" data-tooltip="Додати товар у список">Додати</button>
+            </div>
+
+            <article class="item-row">
+                <div class="item-name">Помідори</div>
+                <div class="item-controls">
+                    <span class="count-box">2</span>
+                </div>
+                <div class="item-actions">
+                    <button class="btn btn-status" data-tooltip="Змінити на: Куплено">Не куплено</button>
+                </div>
+            </article>
+
+            <article class="item-row">
+                <div class="item-name">Печиво</div>
+                <div class="item-controls">
+                    <button class="btn-circle btn-minus" data-tooltip="Зменшити кількість" aria-label="Зменшити">-</button>
+                    <span class="count-box">2</span>
+                    <button class="btn-circle btn-plus" data-tooltip="Збільшити кількість" aria-label="Збільшити">+</button>
+                </div>
+                <div class="item-actions">
+                    <button class="btn btn-status active" data-tooltip="Скасувати покупку">Куплено</button>
+                    <button class="btn-square btn-delete" data-tooltip="Видалити зі списку" aria-label="Видалити">✖</button>
+                </div>
+            </article>
+
+            <article class="item-row">
+                <div class="item-name">
+                    <input type="text" class="edit-input" value="Сир" aria-label="Редагувати назву">
+                </div>
+                <div class="item-controls">
+                    <button class="btn-circle btn-minus disabled" data-tooltip="Мінімальна кількість" aria-label="Зменшити" disabled>-</button>
+                    <span class="count-box">1</span>
+                    <button class="btn-circle btn-plus" data-tooltip="Збільшити кількість" aria-label="Збільшити">+</button>
+                </div>
+                <div class="item-actions">
+                    <button class="btn btn-status active" data-tooltip="Скасувати покупку">Куплено</button>
+                    <button class="btn-square btn-delete" data-tooltip="Видалити зі списку" aria-label="Видалити">✖</button>
+                </div>
+            </article>
+        </section>
+
+        <aside class="summary">
+            <section class="summary-block">
+                <h2>Залишилося</h2>
+                <div class="pills">
+                    <span class="pill">Печиво <span class="badge">2</span></span>
+                    <span class="pill">Сир <span class="badge">1</span></span>
+                </div>
+            </section>
+            
+            <section class="summary-block">
+                <h2>Куплено</h2>
+                <div class="pills">
+                    <span class="pill crossed">Помідори <span class="badge">2</span></span>
+                </div>
+            </section>
+        </aside>
+
+    </main>
+
+    <div class="author-badge" data-tooltip="Інформація про автора">
+        <div class="badge-front">Buy List</div>
+        <div class="badge-hidden">Created by:<br>Vladyslav Rezanov</div>
+    </div>
+</body>
+</html>
