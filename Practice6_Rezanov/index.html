@@ -1,0 +1,55 @@
+
+<!--Варіант 9 — Chart.js · Дашборд продажів
+Бібліотека: Chart.js.
+
+Що показати: дашборд із двох графіків: - Bar — продажі по місяцях (12 значень). - Line — порівняння двох років (2024 vs 2025) накладені на один графік.
+
+Дані — продажі магазину (грн або шт), реалістичні значення.
+
+Інтерактив: dropdown <select> із вибором товарної категорії («Електроніка», «Одяг», «Книги» — 3+). Зміна вибору — оновлює дані на обох графіках (chart.data.datasets[0].data = ...; chart.update()).-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дашборд продажів</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="script.js" defer ></script>
+</head>
+<body>
+
+   <div class="container">
+    <header class="dashboard-header">
+        <h1>Дашборд продажів</h1>
+        <div class="filter-group-selector">
+            <label for="category-selector">Категорія:</label>
+            <select id="category-selector">
+                <option value="electronics">Електроніка</option>
+                <option value="clothing">Одяг</option>
+                <option value="books">Книги</option>
+            </select>
+        </div>
+    </header>
+    <hr>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h2>Продажі по місяцях (поточний рік)</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Порівняння продажів: 2024 vs 2025</h2>
+                <canvas id="lineChart"></canvas>
+            </div>
+
+        </div>
+   </div>
+
+
+    
+</body>
+</html>
